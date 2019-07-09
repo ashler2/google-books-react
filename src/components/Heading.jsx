@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Heading = () => {
-  return <h1>Books on 'topic'</h1>;
+const Heading = ({ topic }) => {
+  return <h1>Books on '{topic}'</h1>;
 };
 
 export default Heading;

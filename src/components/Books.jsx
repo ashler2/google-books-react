@@ -1,9 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const Books = () => {
+const Books = ({ books }) => {
   return (
-    <div>Books</div>
+    <ul>
+      {books.map(book => {
+        console.log(book);
+        return (
+          <li key={book.id}>
+            <h2>{book.volumeInfo.title}</h2>
+            <img
+              src={
+                book.volumeInfo.imageLinks &&
+                book.volumeInfo.imageLinks.smallThumbnail
+              }
+              alt="Book Cover"
+            />
+            <p>Authors: {book.volumeInfo.authors}</p>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 
