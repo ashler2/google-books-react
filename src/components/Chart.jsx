@@ -27,7 +27,11 @@ const Chart = ({ books }) => {
       }
     ]
   };
-  return <Pie data={data} />;
+  return (
+    <div className="chart">
+      <Pie data={data} />
+    </div>
+  );
 };
 
 export default Chart;

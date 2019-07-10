@@ -6,7 +6,7 @@ class Search extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="search">
         <label>Search: </label>
         <input
           type="text"

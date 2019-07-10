@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 const Books = ({ books }) => {
   return (
-    <ul>
+    <ul className="books">
       {books.map(book => {
         console.log(book);
         return (
-          <li key={book.id}>
+          <li key={book.id} className="book">
             <h2>{book.volumeInfo.title}</h2>
             <img
               src={
